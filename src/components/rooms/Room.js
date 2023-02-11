@@ -71,7 +71,7 @@ const Room = () => {
         dispatch({ type: 'ADD_COMMENT', payload: comment });
 
         try {
-            await axios.post('http://localhost:5000/comments', comment);
+            await axios.post('https://crmv2.onrender.com/comments', comment);
         } catch (err) {
             console.error(err);
         }
@@ -81,7 +81,7 @@ const Room = () => {
 
         
     useEffect(() => {
-        axios.get('http://localhost:5000/comments')
+        axios.get('https://crmv2.onrender.com/comments')
             .then(res => {
             const filteredComments = res.data.filter(comment => comment.roomId === room._id);
             setCommentsHistory(filteredComments.sort((a, b) => b.timestamp - a.timestamp));
