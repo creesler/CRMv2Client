@@ -7,8 +7,11 @@ import moment from 'moment'
 import { grey } from '@mui/material/colors'
 import UsersActions from './UsersActions'
 
+
+
 const Users = ({setSelectedLink, link}) => {
   const {state:{users, currentUser}, dispatch} = useValue()
+
 
   const [pageSize, setPageSize] = useState(5)
   const [rowId, setRowId] = useState(null)
@@ -16,6 +19,7 @@ const Users = ({setSelectedLink, link}) => {
     setSelectedLink(link)
     if(users.length === 0) getUsers(dispatch, currentUser) 
 }, [])
+
 
 const columns = useMemo(()=>[
   {
@@ -119,6 +123,12 @@ const columns = useMemo(()=>[
   {
     field:'areas', 
     headerName:'Areas', 
+    width:400, 
+    editable: currentUser?.role === 'admin',
+  },
+  {
+    field:'siteshowcase', 
+    headerName:'Showcase', 
     width:400, 
     editable: currentUser?.role === 'admin',
   },

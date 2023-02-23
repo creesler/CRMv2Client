@@ -32,6 +32,7 @@ const ClientDetails = () => {
                     <Typography >
                         {/* {users.length} */}
                         {/* <p>Active: {currentUser.active ? 'Yes' : 'No'}</p> */}
+                        <p>Website: <a href={currentUser.link} target="_blank" rel="noopener noreferrer">{currentUser.link}</a></p>
                         <p>Name: {currentUser.name}</p>
                         <p>Email: {currentUser.email}</p>
                         <p>Company Name: {currentUser.companyname}</p>
@@ -68,8 +69,8 @@ const ClientDetails = () => {
                 </Paper>
                 <Paper elevation={3} sx={{p:2, gridColumn:3, gridRow:'1/4'}}>
                     <Box>
-                    <Typography variation='h1' sx={{fontSize:'24px'}}>Your Linkss</Typography>
-                        <p>Website: <a href={currentUser.link} target="_blank" rel="noopener noreferrer">{currentUser.link}</a></p>
+                    <Typography variation='h1' sx={{fontSize:'24px'}}>Your Links</Typography>
+                        
                         <p>Facebook: <a href={currentUser.linkfacebook} target="_blank" rel="noopener noreferrer">{currentUser.linkfacebook}</a></p>
                         <p>Youtube: <a href={currentUser.linkyoutube} target="_blank" rel="noopener noreferrer">{currentUser.linkyoutube}</a></p>
                         <p>Twitter: <a href={currentUser.linktwitter} target="_blank" rel="noopener noreferrer">{currentUser.linktwitter}</a></p>
@@ -82,7 +83,19 @@ const ClientDetails = () => {
                     </Box>
                     <Divider sx={{mt:3, mb:3, opacity:0.7}} />
                     <Box>
-                    <Typography>Helpful Links</Typography>
+                    <Typography variation='h1' sx={{fontSize:'24px'}}>Showcase</Typography>
+
+                     
+                    <Paper elevation={3} sx={{p:2, gridColumn:'1/3'}}>
+                    <iframe
+                        title="Gallery"
+                        // src="https://jaredstout.ava-247.com/gallery/"
+                        src={currentUser.siteshowcase}
+                        width="100%"
+                        height="900px"
+                        frameborder="0"
+                    />
+                    </Paper>    
                     {/* <List>
                         {rooms.slice(0,4).map((room,i)=>(
                         <Box key={room._id}>
@@ -102,11 +115,11 @@ const ClientDetails = () => {
                     </Box>
                 </Paper>
                 <Paper elevation={3} sx={{p:2, gridColumn:'1/3'}}>
-                    <p>1 to 2 Paragraphs telling us about your Business: {currentUser.paragraphbusiness}</p>
+                    <p><Typography variation='h1' sx={{fontSize:'24px'}}>About Your Business:</Typography> {currentUser.paragraphbusiness}</p>
                     
                 </Paper>
                 <Paper elevation={3} sx={{p:2, gridColumn:'1/3'}}>
-                    <p>1 to 2 Paragraphs telling us about your Yourself: {currentUser.paragraphyourself}</p>
+                <p><Typography variation='h1' sx={{fontSize:'24px'}}>About Yourself:</Typography> {currentUser.paragraphyourself}</p>
                 </Paper>
                 </Box>
         </div>

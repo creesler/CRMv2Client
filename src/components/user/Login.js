@@ -59,6 +59,9 @@ const Login = () => {
     const [jobtitle, setJobtitle] = useState('None')
     const datehiredRef = useRef();
     const [datehired, setDatehired] = useState('None')
+    const siteshowcaseRef = useRef();
+    const [siteshowcase, setSiteshowcase] = useState('None')
+    
 
     const nameRef = useRef()
     const emailRef = useRef()
@@ -99,6 +102,8 @@ const Login = () => {
         const department = isRegister ? departmentRef.current.value : ''; 
         const jobtitle = isRegister ? jobtitleRef.current.value : ''; 
         const datehired = isRegister ? datehiredRef.current.value : ''; 
+        const siteshowcase = isRegister ? siteshowcaseRef.current.value : ''; 
+        
 
         const password = passwordRef.current.value
         if(!isRegister) return login ({email, password}, dispatch);
@@ -142,6 +147,7 @@ const Login = () => {
                 department,
                 jobtitle,
                 datehired,
+                siteshowcase,
             }, dispatch);
     };
 
@@ -360,6 +366,19 @@ const Login = () => {
                 inputRef={areasRef}
                 value={areas}
                 onChange={(e) => setAreas(e.target.value)}
+                />
+                }
+                {isRegister &&
+                <TextField 
+                margin='normal'
+                variant='standard'
+                id='siteshowcase'
+                label='Showcase Link'
+                type='text'
+                fullWidth
+                inputRef={siteshowcaseRef}
+                value={siteshowcase}
+                onChange={(e) => setSiteshowcase(e.target.value)}
                 />
                 }
                 {isRegister &&

@@ -44,6 +44,7 @@ const UsersActions = ({ params, rowId, setRowId }) => {
                 department,
                 jobtitle,
                 datehired,
+                siteshowcase,
             } = params.row;
             const result = await updateStatus(
                 { 
@@ -73,6 +74,7 @@ const UsersActions = ({ params, rowId, setRowId }) => {
                     department,
                     jobtitle,
                     datehired,
+                    siteshowcase,
                 }, 
                 _id, 
                 dispatch, 

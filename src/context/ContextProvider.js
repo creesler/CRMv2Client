@@ -41,6 +41,7 @@ const initialState = {
     section: 0,
     link:'',
     companyname:'',
+    siteshowcase:'',
     address:'',
     phone:'',
     profilee:{open:false, file:null, photoURL:''},
