@@ -68,7 +68,7 @@ const ClientDetails = () => {
                 </Paper>
                 <Paper elevation={3} sx={{p:2, gridColumn:3, gridRow:'1/4'}}>
                     <Box>
-                    <Typography variation='h1' sx={{fontSize:'24px'}}>Your Links</Typography>
+                    <Typography variation='h1' sx={{fontSize:'24px'}}>Your Linkss</Typography>
                         <p>Website: <a href={currentUser.link} target="_blank" rel="noopener noreferrer">{currentUser.link}</a></p>
                         <p>Facebook: <a href={currentUser.linkfacebook} target="_blank" rel="noopener noreferrer">{currentUser.linkfacebook}</a></p>
                         <p>Youtube: <a href={currentUser.linkyoutube} target="_blank" rel="noopener noreferrer">{currentUser.linkyoutube}</a></p>
