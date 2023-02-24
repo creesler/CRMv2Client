@@ -86,16 +86,18 @@ const ClientDetails = () => {
                     <Typography variation='h1' sx={{fontSize:'24px'}}>Showcase</Typography>
 
                      
-                    <Paper elevation={3} sx={{p:2, gridColumn:'1/3'}}>
-                    <iframe
-                        title="Gallery"
-                        // src="https://jaredstout.ava-247.com/gallery/"
-                        src={currentUser.siteshowcase}
-                        width="100%"
-                        height="900px"
-                        frameborder="0"
-                    />
-                    </Paper>    
+                   
+                        <div style={{ borderRadius: '10px', overflow: 'hidden' }}>
+                            <iframe
+                                title="Gallery"
+                                // src="https://jaredstout.ava-247.com/gallery/"
+                                src={currentUser.siteshowcase}
+                                width="100%"
+                                height="900px"
+                                frameborder="0"
+                            />
+                        </div>
+                  
                     {/* <List>
                         {rooms.slice(0,4).map((room,i)=>(
                         <Box key={room._id}>
